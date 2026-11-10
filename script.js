@@ -167,6 +167,9 @@ function initSimulator() {
 
   if (!form || !resultBtn) return;
 
+  // Previne recarregamento acidental ao teclar Enter
+  form.addEventListener('submit', (e) => e.preventDefault());
+
   const phone = '5562991123830'; // (62) 99112-3830
 
   function updateWhatsAppLink() {
